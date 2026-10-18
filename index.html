@@ -124,7 +124,7 @@
         try {
           if (!('Suspending' in WebAssembly)) throw new Error('This game requires Chrome or Edge 137 or newer.');
           const [html, script, wasm, data, image] = await Promise.all([
-            downloadText('index.html'), downloadText('hcr.js'),
+            downloadText('game/index.html'), downloadText('hcr.js'),
             downloadAsset('hcr.wasm'), downloadAsset('hcr.data'), downloadAsset('image.bin')
           ]);
           const assets = { 'hcr.wasm': wasm, 'hcr.data': data, 'image.bin': image };
